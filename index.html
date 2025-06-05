@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img.jpeg" type="image/png" />
+</head>
+<body>
+  <header>
+    <h1>Movie Explorer</h1>
+    <input type="text" id="search" placeholder="Search movies...">
+  </header>
+
+  <main>
+    <div id="movie-list"></div>
+  </main>
+
+  <!-- Movie Details Modal -->
+  <div id="movie-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img id="modal-poster" src="" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-overview"></p>
+      <p><strong>Rating:</strong> <span id="modal-rating"></span> / 10</p>
+      <p><strong>Actors:</strong> <span id="modal-actors"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
