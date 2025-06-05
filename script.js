@@ -33,7 +33,7 @@ function displayMovies(movies) {
   });
 }
 
-// Initial load: popular movies
+
 fetchMovies(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
 
 searchInput.addEventListener("keyup", () => {
@@ -56,7 +56,7 @@ function showMovieModal(movieId) {
       document.getElementById('modal-overview').innerText = movie.overview;
       document.getElementById('modal-rating').innerText = movie.vote_average;
 
-      // Fetch actors
+      
       fetch(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`)
         .then(res => res.json())
         .then(data => {
@@ -68,7 +68,7 @@ function showMovieModal(movieId) {
     });
 }
 
-// Close modal logic
+
 document.querySelector('.close-button').addEventListener('click', () => {
   document.getElementById('movie-modal').classList.add('hidden');
 });

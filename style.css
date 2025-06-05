@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   min-height: 100vh;
 }
 
-/* Header */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -40,7 +38,6 @@ h1 {
   color: #000;
 }
 
-/* Movie List */
 #movie-list {
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +45,6 @@ h1 {
   justify-content: center;
 }
 
-/* Movie Card */
 .movie-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
@@ -89,7 +85,6 @@ h1 {
   color: #ddd;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0;
@@ -134,17 +129,32 @@ h1 {
   cursor: pointer;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) {
+  #movie-list {
+    gap: 20px;
+  }
+  .movie-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
   #search {
     width: 90%;
   }
-
+  header h1 {
+    font-size: 2rem;
+  }
+  #search {
+    font-size: 14px;
+  }
+  .movie-card {
+    width: 100%;
+  }
   .modal-content {
     width: 95%;
     padding: 10px;
   }
-
   .modal-content img {
     max-height: 250px;
   }
